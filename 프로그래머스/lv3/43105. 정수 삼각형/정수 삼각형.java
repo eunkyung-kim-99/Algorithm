@@ -12,16 +12,7 @@ class Solution {
                 if(j == triangle[i].length - 1) continue;
                 dp[i - 1][j] = Math.max(dp[i - 1][j], triangle[i - 1][j] + dp[i][j]);                
             }
-            // print(dp);
         }                          
         return dp[0][0];
-    }
-    public void print(int[][] dp){
-        for(int i = 0; i < dp.length; i++){
-            for(int j = 0; j < dp[0].length; j++){
-                System.out.print(dp[i][j]+" ");
-            }
-            System.out.println();
-        }
     }
 }
